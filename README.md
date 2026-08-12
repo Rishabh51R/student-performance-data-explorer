@@ -2,16 +2,14 @@
 
 ## AI/ML Internship — Task 1
 
-### Project Objective
-This project performs exploratory data analysis (EDA) on student performance data using Python, Pandas, NumPy, Matplotlib, and Seaborn.
+This project performs Exploratory Data Analysis (EDA) on student performance data using Python, Pandas, NumPy and Matplotlib.
 
-The workflow includes:
-- Data loading
-- Data inspection
-- Missing-value analysis and cleaning
-- Duplicate detection and removal
+### Analysis performed
+- Data loading and inspection
+- Missing-value and duplicate checks
+- Data cleaning
 - Descriptive statistics
-- Mean, median, and mode
+- Mean, median and mode
 - Histogram
 - Scatter plot
 - Box plots
@@ -20,60 +18,35 @@ The workflow includes:
 - Findings and conclusion
 
 ## Dataset
-The dataset contains 122 records before cleaning and 7 columns.
+The actual uploaded dataset contains **20 student records and 7 columns**.
 
 Columns:
-- Student_Name
-- Study_Hours
-- Attendance_Percent
-- Assignment_Score
-- Python_Score
-- ML_Score
-- Final_Score
+`student_id`, `gender`, `study_hours`, `attendance_percent`, `previous_score`, `assignments_completed`, `final_score`
 
 ## Data Cleaning
-- Missing cells before cleaning: 5
-- Numeric missing values were filled using the median of the respective column.
-- Duplicate rows removed: 2
-- Final cleaned dataset: 120 rows.
+- Missing cells: **0**
+- Duplicate rows: **0**
+- Cleaned dataset: **20 rows**
 
-## Key Findings
-- Average Final Score: 70.81
-- Median Final Score: 71.55
-- Highest Final Score: 89.3
-- Lowest Final Score: 55.0
-- Study Hours vs Final Score correlation: 0.64
-- Attendance vs Final Score correlation: 0.14
-- Strongest correlation with Final Score: ML_Score (0.66)
+## Actual Findings
+- Average final score: **77.55**
+- Median final score: **77.50**
+- Mode final score: **53.00**
+- Highest final score: **98.00**
+- Lowest final score: **53.00**
+- Average study hours: **4.42**
+- Average attendance: **84.65%**
+- Study hours vs final score correlation: **0.99**
+- Attendance vs final score correlation: **0.98**
+- Previous score vs final score correlation: **1.00**
+- Assignments completed vs final score correlation: **0.97**
 
-## Project Structure
-
-```text
-student_performance_data_explorer/
-├── data/
-│   └── student_performance.csv
-├── notebooks/
-│   └── Student_Performance_Data_Explorer.ipynb
-├── assets/
-│   ├── 01_final_score_histogram.png
-│   ├── 02_study_hours_vs_final_score.png
-│   ├── 03_score_boxplots.png
-│   └── 04_correlation_heatmap.png
-├── reports/
-│   ├── actual_findings.md
-│   └── execution_summary.json
-├── src/
-└── README.md
-```
-
-## How to Run
-1. Install Python 3.12+.
-2. Install the required packages:
-   `pip install pandas numpy matplotlib seaborn jupyter`
-3. Open the `notebooks` folder in Jupyter Notebook.
-4. Run `Student_Performance_Data_Explorer.ipynb` from top to bottom.
-
-## Conclusion
-The analysis demonstrates a complete beginner-level EDA workflow. The generated charts help understand score distributions, relationships between study hours and final scores, possible outliers, and correlations among numeric variables.
+The strongest correlation with final score among these numeric predictors is **previous score (1.00)**.
 
 > Correlation indicates association; it does not by itself prove causation.
+
+## How to Run
+Install:
+`pip install pandas numpy matplotlib seaborn jupyter`
+
+Open `Student_Performance_Data_Explorer.ipynb` and run all cells from top to bottom.
